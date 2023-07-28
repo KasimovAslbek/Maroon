@@ -1,21 +1,11 @@
 import Main from "./components/Main";
-
+import Bestsellers from "./components/Bestsellers";
 function App() {
   return (
-    <div className="App">
+    <div className="App text-[#122947] max-w-main mx-auto overflow-x-hidden">
       <header className="App-header">
         <Main/>
-        <p className="text-red-500 ">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Bestsellers/>
       </header>
     </div>
   );
