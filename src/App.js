@@ -3,6 +3,8 @@ import Bestsellers from "./components/Bestsellers";
 import Spring from "./components/Spring";
 import Indcare from "./components/Indcare";
 import Ritual from "./components/Ritual";
+import Subscribe from "./components/Subscribe";
+import Contacts from "./components/Contacts";
 function App() {
   return (
     <div className="App text-[#122947] max-w-main mx-auto overflow-x-hidden">
@@ -12,6 +14,8 @@ function App() {
         <Spring/>
         <Indcare/>
         <Ritual/>
+        <Subscribe/>
+        <Contacts/>
       </header>
     </div>
   );
