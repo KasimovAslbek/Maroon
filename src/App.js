@@ -6,6 +6,7 @@ import Ritual from "./components/Ritual";
 import Subscribe from "./components/Subscribe";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
+import Test from "./components/Test";
 function App() {
   return (
     <div className="App text-[#122947] max-w-main mx-auto overflow-x-hidden">
@@ -18,6 +19,7 @@ function App() {
         <Subscribe/>
         <Contacts/>
         <Footer/>
+        <Test/>
       </header>
     </div>
   );
