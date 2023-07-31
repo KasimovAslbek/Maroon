@@ -12,7 +12,7 @@ function Indcare() {
                 <h2 className='text-2xl md:text-3xl mb-11 md:mb-10'>Individual care</h2>
                 <p className=' hidden md:block'>It is not always obvious what elements and minerals the skin needs, and numerous experiments with different products only worsen its quality.</p> 
                 <p className='mb-8 md:mb-11'>Fill out the questionnaire and we will select the care that is right for you, taking into account your lifestyle, place of residence and other factors.</p>
-                <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px] '>Fill out the form</button>
+                <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px] hover:bg-slate-200 duration-700'>Fill out the form</button>
             </div>
 
         </div>

@@ -31,7 +31,7 @@ function Bestsellers() {
             <div className='text-center md:w-[214px] mb-12 md:mb-0'>
                 <h2 className='text-2xl md:text-3xl font-medium'>Bestsellers</h2>
                 <p className='md:text-lg mt-5 md:mt-8 mb-7 md:mb-10' >Natural cosmetics for gentle skin care</p>
-                <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px]  mx-auto hidden md:block'>See all</button>
+                <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px]  mx-auto hidden md:block hover:bg-slate-200 duration-700'>See all</button>
             </div>
             <div className='overflow-x-hidden'>
                 <Swiper
@@ -92,7 +92,7 @@ function Bestsellers() {
                     <path d="M0 7H26M26 7L19.697 1M26 7L19.697 13" stroke="#122947"/>
                 </svg>
             </div>
-            <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px]  mx-auto  md:hidden flex justify-start mt-10'><p className='mx-auto'>See all</p></button>
+            <button className='border border-[#B3BAC1] px-6 py-3 min-w-[155px]  mx-auto  md:hidden flex justify-start mt-10 hover:bg-slate-200 duration-700'><p className='mx-auto'>See all</p></button>
 
     </div>
   )

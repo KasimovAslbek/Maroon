@@ -21,7 +21,7 @@ function Subscribe() {
         <div className='sm:w-1/2 lg:w-5/12 sm:mr-11 lg:mr-24 mx-4 sm:mx-0 text-center sm:text-start'>
             <h2 className='text-2xl md:text-3xl font-medium'>Join us</h2>
             <p className='md:text-lg mt-8 mb-12'>Subscribe to our account @marooncare and be the first to know about new products and promotions</p>
-            <button className='border border-[#B3BAC1] px-8 py-3.5 min-w-[141px] '>Subscribe</button>
+            <button className='border border-[#B3BAC1] px-8 py-3.5 min-w-[141px] hover:bg-slate-200 duration-700'>Subscribe</button>
         </div>
         
       
