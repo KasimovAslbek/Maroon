@@ -12,7 +12,7 @@ function Contacts() {
             <p className='font-medium mt-9 mb-5'>Telephone</p>
             <p>+998 (91) 6200061</p>
             <p className='font-medium mt-9 mb-5'>E-mail</p>
-            <p>info@maroon.ru</p>
+            <p>info@maroon.com</p>
             <div className='flex gap-8 mt-9'>
                 <a href="https://www.example.com/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewBox="0 0 11 18" fill="none">
