@@ -11,6 +11,7 @@ import cat9 from '../img/cat9.png'
 import cat10 from '../img/cat10.png'
 import cat11 from '../img/cat11.png'
 import cat12 from '../img/cat12.png'
+import './style.css'
 
 const data = [
     { id: 1, source: cat1, title: "High", desc : "face cream", price : "990", capacity : "50ml" }, 
@@ -37,10 +38,90 @@ function CatalogItems() {
                 <h2 className='text-4xl font-medium'>Catalog</h2>
                 <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Filter</button>
             </div>
+            <div>
+                <form className='flex justify-center gap-20'>
+                    <div className='space-y-5 text-[#9A9DA0]'>
+                        <h2 className='mb-3 text-lg font-medium text-[#122947]'>Facial care</h2>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="cream" id="cream" className="rounded-checkbox" />
+                            <span className="text-base">cream</span>
+                        </label>
+                        <input type="checkbox" name="Serums" id="Serums" className="rounded-checkbox" />
+                        <label htmlFor="Serums"> Serums</label>
+                        <br/>
+                        <input type="checkbox" name="masks" id="masks" className="rounded-checkbox" />
+                        <label htmlFor="masks"> masks</label>
+                        <br/>
+                        <input type="checkbox" name="Penki" id="Penki" className="rounded-checkbox" />
+                        <label htmlFor="Penki"> Penki</label>
+                        <br/>
+                        <input type="checkbox" name="Tonics" id="Tonics" className="rounded-checkbox" />
+                        <label htmlFor="Tonics"> Tonics</label>
+                        <br/>
+                        <input type="checkbox" name="Powders" id="Powders" className="rounded-checkbox" />
+                        <label htmlFor="Powders"> Powders</label>
+                    </div>
+
+                    <div className='space-y-5'>
+                        <h2 className='mb-3 text-lg font-medium'>Body care</h2>
+                        <input type="checkbox" name="cream1" id="cream1" />
+                        <label htmlFor="cream1"> cream</label>
+                        <br/>
+                        <input type="checkbox" name="Oils" id="Oils" />
+                        <label htmlFor="Oils"> Oils</label>
+                        <br/>
+                        <input type="checkbox" name="Scrubs" id="Scrubs" />
+                        <label htmlFor="Scrubs"> Scrubs</label>
+                        <br/>
+                        <input type="checkbox" name="Soap" id="Soap" />
+                        <label htmlFor="Soap"> Soap</label>
+                        <br/>
+                        <input type="checkbox" name="bath bombs" id="bath bombs" />
+                        <label htmlFor="bath bombs"> bath bombs</label>
+                        <br/>
+                        <input type="checkbox" name="Bath salt" id="Bath salt" />
+                        <label htmlFor="Bath salt"> Bath salt</label>
+                    </div>
+                    <div className='space-y-5'>
+                        <h2 className='mb-3 text-lg font-medium'>Skin type</h2>
+                        <input type="checkbox" name="Normal" id="Normal" />
+                        <label htmlFor="Normal"> Normal</label>
+                        <br/>
+                        <input type="checkbox" name="Dry" id="Dry" />
+                        <label htmlFor="Dry"> Dry</label>
+                        <br/>
+                        <input type="checkbox" name="oily" id="oily" />
+                        <label htmlFor="oily"> oily</label>
+                        <br/>
+                        <input type="checkbox" name="Combined" id="Combined" />
+                        <label htmlFor="Combined"> Combined</label>
+                        <div className='flex gap-5'>
+                            <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Apply</button>
+                            <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+
+             
+            
+            
+            
+            
+            
+
+            
+            
+            
+            
+            
+
+           
             <div className='grid grid-cols-4 gap-7'>
-                {data.map((card) =>(
-                  <div className='relative'>
-                    <img key={card.id} className='w-full h-full' src={card.source} alt="" />  
+                {data.map((card , index) =>(
+                  <div key={index} className='relative'>
+                    <img  className='w-full h-full' src={card.source} alt="" />  
                     <div className='absolute bottom-5 text-center w-full ml-5 pr-12 z-20'>
                         <div className='flex justify-between font-medium'>
                             <p>{card.title}</p>

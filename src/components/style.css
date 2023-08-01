@@ -1,0 +1,30 @@
+/* Custom circular checkbox styles */
+.rounded-checkbox {
+    /* Hide the default checkbox appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Set the size of the checkbox */
+    width: 20px;
+    height: 20px;
+    /* Add a custom circular shape */
+    border-radius: 50%;
+    /* Add a border to the checkbox */
+    border: 1px solid #cbd5e0;
+    /* Add some space inside the checkbox */
+    padding: 3px;
+    /* Set the default background color when unchecked */
+    background-color: #fff;
+  }
+  
+  /* Style the checked state */
+  .rounded-checkbox:checked {
+    /* Change the background color when checked */
+    background-color: #122947;
+    border: 4px solid #cbd5e0;
+    /* You can add a different color or an icon for the checkmark here */
+  }
+  .rounded-checkbox:checked + span {
+    color: #122947;
+  }
+  
