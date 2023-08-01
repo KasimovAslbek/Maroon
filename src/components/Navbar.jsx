@@ -15,7 +15,7 @@ function Navbar() {
                 </svg>
                 <div  className={`bg-[#F8F8F6] absolute w-full mt-1 pl-4 sm:pl-12 pt-10 sm:pt-12 top-full left-0 text-2xl sm:text-3xl ${menuOpen ? '' : 'hidden'} `}>
                     <ul className='space-y-9 sm:space-y-10'>
-                        <li><a href="https://www.example.com/">Catalog</a></li>
+                        <li><a href="catalog">Catalog</a></li>
                         <li><a href="https://www.example.com/">About Us</a></li>
                         <li><a href="https://www.example.com/">Contacts</a></li>
                     </ul>
@@ -39,7 +39,7 @@ function Navbar() {
                 </div>
             </div>
             <div>
-                <a href="https://www.example.com/">
+                <a href="/">
                     <svg className='hidden lg:block' xmlns="http://www.w3.org/2000/svg" width="131" height="21" viewBox="0 0 131 21" fill="none">
                         <path d="M0 0.432098H3.06145L10.535 16.1317L18.0085 0.432098H21.07V20.5679H18.0986V6.25103L11.2854 20.5679H9.78465L2.9414 6.25103V20.5679H0V0.432098Z" fill="#122947"/>
                         <path d="M31.9844 0.432098H34.9258L43.2998 20.5679H40.1783L38.0773 15.5556H28.8029L26.7619 20.5679H23.6104L31.9844 0.432098ZM37.2369 13.107L33.4551 3.68724L29.6733 13.107H37.2369Z" fill="#122947"/>
@@ -68,7 +68,7 @@ function Navbar() {
             </div>
             <div className='flex items-center justify-between gap-12'>
                 <ul className='lg:flex items-center justify-between gap-9 hidden '>
-                    <li><a href="https://www.example.com/">Catalog</a></li>
+                    <li><a href="catalog">Catalog</a></li>
                     <li><a href="https://www.example.com/">About Us</a></li>
                     <li><a href="https://www.example.com/">Contacts</a></li>
                 </ul>
