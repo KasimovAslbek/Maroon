@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,9 +14,9 @@ function Navbar() {
                 <svg className={`cursor-pointer ${menuOpen ? '' : 'hidden'}`} onClick={() => setMenuOpen(!menuOpen)} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
     <             path d="M1 1L10 10M19 19L10 10M10 10L19 1L1 19" stroke="#122947" strokeWidth="2"/>
                 </svg>
-                <div  className={`bg-[#F8F8F6] absolute w-full mt-1 pl-4 sm:pl-12 pt-10 sm:pt-12 top-full left-0 text-2xl sm:text-3xl ${menuOpen ? '' : 'hidden'} `}>
+                <div  className={`bg-[#F8F8F6] absolute z-50 w-full mt-1 pl-4 sm:pl-12 pt-10 sm:pt-12 top-full left-0 text-2xl sm:text-3xl ${menuOpen ? '' : 'hidden'} `}>
                     <ul className='space-y-9 sm:space-y-10'>
-                        <li><a href="catalog">Catalog</a></li>
+                        <li><Link to="/catalog">Catalog</Link></li>
                         <li><a href="https://www.example.com/">About Us</a></li>
                         <li><a href="https://www.example.com/">Contacts</a></li>
                     </ul>
@@ -68,7 +69,7 @@ function Navbar() {
             </div>
             <div className='flex items-center justify-between gap-12'>
                 <ul className='lg:flex items-center justify-between gap-9 hidden '>
-                    <li><a href="catalog">Catalog</a></li>
+                    <li><Link to="/catalog">Catalog</Link></li>
                     <li><a href="https://www.example.com/">About Us</a></li>
                     <li><a href="https://www.example.com/">Contacts</a></li>
                 </ul>

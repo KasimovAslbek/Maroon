@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import cat1 from '../img/cat1.png'
 import cat2 from '../img/cat2.png'
 import cat3 from '../img/cat3.png'
@@ -30,72 +30,92 @@ const data = [
 
 
 function CatalogItems() {
+    const [filterOpen, setFilterOpen] = useState(false);
   return (
     <div className='bg-[#F8F8F6] '>
         <div className='w-full h-0.5 bg-[#DBDCE0]'></div>
         <div className="mx-4 sm:mx-11 lg:mx-24 ">
             <div className='w-full flex justify-between items-center mt-10 pb-14'>
                 <h2 className='text-4xl font-medium'>Catalog</h2>
-                <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Filter</button>
+                <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'   onClick={() => setFilterOpen(!filterOpen)}>Filter</button>
             </div>
-            <div>
+            <div className={`mb-32  ${filterOpen ? 'block' : 'hidden'}`}>
                 <form className='flex justify-center gap-20'>
                     <div className='space-y-5 text-[#9A9DA0]'>
                         <h2 className='mb-3 text-lg font-medium text-[#122947]'>Facial care</h2>
                         <label className='flex items-center space-x-2'>
                             <input type="checkbox" name="cream" id="cream" className="rounded-checkbox" />
-                            <span className="text-base">cream</span>
+                            <span className="text-base">Cream</span>
                         </label>
-                        <input type="checkbox" name="Serums" id="Serums" className="rounded-checkbox" />
-                        <label htmlFor="Serums"> Serums</label>
-                        <br/>
-                        <input type="checkbox" name="masks" id="masks" className="rounded-checkbox" />
-                        <label htmlFor="masks"> masks</label>
-                        <br/>
-                        <input type="checkbox" name="Penki" id="Penki" className="rounded-checkbox" />
-                        <label htmlFor="Penki"> Penki</label>
-                        <br/>
-                        <input type="checkbox" name="Tonics" id="Tonics" className="rounded-checkbox" />
-                        <label htmlFor="Tonics"> Tonics</label>
-                        <br/>
-                        <input type="checkbox" name="Powders" id="Powders" className="rounded-checkbox" />
-                        <label htmlFor="Powders"> Powders</label>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="Serums" id="Serums" className="rounded-checkbox" />    
+                            <span className="text-base">Serums</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="masks" id="masks" className="rounded-checkbox" />    
+                            <span className="text-base">Masks</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="Penki" id="Penki" className="rounded-checkbox" />   
+                            <span className="text-base">Penki</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="Tonics" id="Tonics" className="rounded-checkbox" /> 
+                            <span className="text-base">Tonics</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="Powders" id="Powders" className="rounded-checkbox" /> 
+                            <span className="text-base">Powders</span>
+                        </label>
                     </div>
 
-                    <div className='space-y-5'>
-                        <h2 className='mb-3 text-lg font-medium'>Body care</h2>
-                        <input type="checkbox" name="cream1" id="cream1" />
-                        <label htmlFor="cream1"> cream</label>
-                        <br/>
-                        <input type="checkbox" name="Oils" id="Oils" />
-                        <label htmlFor="Oils"> Oils</label>
-                        <br/>
-                        <input type="checkbox" name="Scrubs" id="Scrubs" />
-                        <label htmlFor="Scrubs"> Scrubs</label>
-                        <br/>
-                        <input type="checkbox" name="Soap" id="Soap" />
-                        <label htmlFor="Soap"> Soap</label>
-                        <br/>
-                        <input type="checkbox" name="bath bombs" id="bath bombs" />
-                        <label htmlFor="bath bombs"> bath bombs</label>
-                        <br/>
-                        <input type="checkbox" name="Bath salt" id="Bath salt" />
-                        <label htmlFor="Bath salt"> Bath salt</label>
+                    <div className='space-y-5 text-[#9A9DA0]'>
+                        <h2 className='mb-3 text-lg font-medium text-[#122947]'>Body care</h2>
+                        <label className='flex items-center space-x-2'>
+                            <input type="checkbox" name="cream1" id="cream1" className="rounded-checkbox" /> 
+                            <span className="text-base">Cream</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                        <input className="rounded-checkbox" type="checkbox" name="Oils" id="Oils" /> 
+                            <span className="text-base">Oils</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="Scrubs" id="Scrubs" /> 
+                            <span className="text-base">Scrubs</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="Soap" id="Soap" /> 
+                            <span className="text-base">Soap</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="bathBombs" id="bathBombs" /> 
+                            <span className="text-base">Bath bombs</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="BathSalt" id="BathSalt" /> 
+                            <span className="text-base">Bath salt</span>
+                        </label>
                     </div>
-                    <div className='space-y-5'>
-                        <h2 className='mb-3 text-lg font-medium'>Skin type</h2>
-                        <input type="checkbox" name="Normal" id="Normal" />
-                        <label htmlFor="Normal"> Normal</label>
-                        <br/>
-                        <input type="checkbox" name="Dry" id="Dry" />
-                        <label htmlFor="Dry"> Dry</label>
-                        <br/>
-                        <input type="checkbox" name="oily" id="oily" />
-                        <label htmlFor="oily"> oily</label>
-                        <br/>
-                        <input type="checkbox" name="Combined" id="Combined" />
-                        <label htmlFor="Combined"> Combined</label>
-                        <div className='flex gap-5'>
+                    <div className='space-y-5 text-[#9A9DA0]'>
+                        <h2 className='mb-3 text-lg font-medium text-[#122947]'>Skin type</h2>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="Normal" id="Normal" /> 
+                            <span className="text-base">Normal</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="Dry" id="Dry" /> 
+                            <span className="text-base">Dry</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                            <input className="rounded-checkbox" type="checkbox" name="oily" id="oily" /> 
+                            <span className="text-base">Oily</span>
+                        </label>
+                        <label className='flex items-center space-x-2'>
+                        <input className="rounded-checkbox" type="checkbox" name="Combined" id="Combined" /> 
+                            <span className="text-base">Combined</span>
+                        </label>
+
+                        <div className='flex gap-5 text-[#122947]'>
                             <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Apply</button>
                             <button className='border border-[#B3BAC1] px-10 py-3.5 min-w-[141px]  hover:bg-slate-200 duration-700'>Reset</button>
                         </div>
